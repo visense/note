@@ -1,4 +1,6 @@
 # virtual-dsm
+/etc/docker/daemon.json
+```
 {
   "bip": "172.5.0.1/16",
   "default-address-pools": [
@@ -8,3 +10,8 @@
     }
   ]
 }
+```
+```
+systemctl restart docker
+docker container restart nas
+```

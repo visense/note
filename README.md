@@ -1,6 +1,6 @@
 # virtual-dsm
 ```
-docker run -itd --name nas -p 80:5000 -p 22:22 -p 445:445 -p 139:139 --cap-add NET_ADMIN -v /mnt/e/Nas:/storage -e DISK_SIZE=60G -e RAM_SIZE=8G -e CPU_CORES=8 vdsm/virtual-dsm
+docker run -itd --name nas --privileged -p 80:5000 -p 6690:6690 -p 22:22 -p 445:445 -p 139:139 --cap-add NET_ADMIN -v /mnt/e/Nas:/storage -e DISK_SIZE=60G -e RAM_SIZE=8G -e CPU_CORES=8 vdsm/virtual-dsm
 ```
 /etc/docker/daemon.json
 ```
